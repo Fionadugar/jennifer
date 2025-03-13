@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Pastelería Sabor y Salud</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #99e269;
+            background-image: url('img/fondo.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: #444;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffebee;
+            border-bottom: 2px solid #d3b6c0;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #80eca0d0;
+            padding: 10px;
+        }
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2e7d32; /* Color de las letras de los enlaces de navegación */
+            font-weight: bold;
+        }
+        .nav a:hover {
+            color: #45a049; /* Color de las letras de los enlaces de navegación al pasar el ratón */
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        button {
+            background-color: #a5d6a7;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Tu Rincón de Dulzura Saludable</h1>
+    </div>
+    <div class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="formulario.html">Formulario</a>
+    </div>
+    <h2 style="text-align: center; color: #81c784;">Formulario de Registro - Pastelería</h2>
+    <form id="formulario">
+        <label>Nombre y Apellidos:</label>
+        <input type="text" id="nombre" oninput="validarNombre()" required>
+        <span class="error" id="errorNombre"></span>
+        
+        <label>Email:</label>
+        <input type="email" id="email" oninput="validarEmail()" required>
+        <span class="error" id="errorEmail"></span>
+        
+        <label>Contraseña:</label>
+        <input type="password" id="password" required>
+        <button type="button" onclick="generarPassword()">Generar Contraseña</button>
+        <span class="error" id="errorPassword"></span>
+        
+        <label>Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" required>
+        
+        <label>Código Postal:</label>
+        <input type="text" id="codigoPostal" oninput="validarCodigoPostal()" required>
+        <span class="error" id="errorCodigoPostal"></span>
+        
+        <label>Calle y Número:</label>
+        <input type="text" id="calle" required>
+        
+        <label>DNI:</label>
+        <input type="text" id="dni" oninput="validarDNI()" required>
+        <span class="error" id="errorDNI"></span>
+        
+        <label>Intereses (Máximo 3):</label>
+        <select id="intereses" multiple>
+            <option>Amigos</option>
+            <option>Blog</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>Twitter</option>
+        </select>
+        
+        <label>Selecciona un Producto:</label>
+        <select>
+            <option>Tarta de Chocolate</option>
+            <option>Pastel de Fresas</option>
+            <option>Galletas Artesanales</option>
+        </select>
+        
+        <label>Observaciones:</label>
+        <textarea placeholder="Escribe aquí..."></textarea>
+        
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar</button>
+    </form>
+    
+    <h3>Mensaje de Conciencia</h3>
+    <p>Disfruta de nuestros productos con moderación y recuerda que los ingredientes naturales son siempre la mejor opción para tu salud.</p>
+    
+    <h3>Contáctanos</h3>
+    <p>Correo: contacto@pasteleriafina.com</p>
+    
+    <script>
+        function validarNombre() {
+            let nombre = document.getElementById('nombre').value;
+            let error = document.getElementById('errorNombre');
+            if (nombre.length < 3) {
+                error.textContent = "El nombre es muy corto";
+            } else {
+                error.textContent = "";
+            }
+        }
+        function validarEmail() {
+            let email = document.getElementById('email').value;
+            let error = document.getElementById('errorEmail');
+            let regex = /^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!regex.test(email)) {
+                error.textContent = "Formato de email inválido";
+            } else {
+                error.textContent = "";
+            }
+        }
+        function validarCodigoPostal() {
+            let codigo = document.getElementById('codigoPostal').value;
+            let error = document.getElementById('errorCodigoPostal');
+            if (codigo.length !== 5 || isNaN(codigo)) {
+                error.textContent = "Ingrese un código postal válido de 5 dígitos";
+            } else {
+                error.textContent = "";
+            }
+        }
+        function validarDNI() {
+            let dni = document.getElementById('dni').value;
+            let error = document.getElementById('errorDNI');
+            let regex = /^[0-9]{8}[A-Z]$/;
+            if (!regex.test(dni)) {
+                error.textContent = "Formato incorrecto. Ejemplo válido: 12345678A";
+            } else {
+                error.textContent = "";
+            }
+        }
+        function generarPassword() {
+            let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*";
+            let password = "";
+            for (let i = 0; i < 12; i++) {
+                password += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById('password').value = password;
+        }
+    </script>
+ <p>
+    <a href="https://validator.w3.org/">
+        <img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88">
+    </a>
+</p>
+<p>
+    <a href="https://fionadugar.github.io/Pasteleria-Sabor-Salud/rss.xml" onclick="return abrirEnNuevaVentana(this.href);">
+        <img src="img/rss-icon.png" alt="RSS Feed" width="30" height="30"> Suscribirse al RSS
+    </a>
+ </p>
+</body>
+</html>

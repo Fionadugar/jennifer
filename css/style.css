@@ -1,0 +1,182 @@
+
+
+table.header-table {
+    width: 100%; 
+    background-color: #f5e0ca; 
+    border: 2px solid #0f6416; 
+    text-align: center; 
+    padding: 20px 0; 
+}
+
+table.header-table td {
+    font-size: 2.5em; 
+    font-weight: bold; 
+    color: #572e2e; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+h1 {
+    color: #c49c2fcb;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 20px;
+}
+
+
+p {
+    font-size: 1.2em;             
+    text-align: justify;          
+    margin: 20px;                 
+}
+
+
+body {
+    background-image: url('../img/pasteleria-fondo.jpg');
+    background-size: cover;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+
+table, th, td {
+    border: 1px solid #df1a1a;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #d1350e;
+    color: white;
+}
+
+#tabla-productos {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ec6e25;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#tabla-productos th, #tabla-productos td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#tabla-productos th {
+    background-color: #ff6600;
+    color: rgb(199, 18, 43);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#tabla-productos td {
+    background-color: #f9f9f9;
+}
+
+#tabla-productos tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+
+#tabla-productos img {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+#tabla-productos img:hover {
+    transform: scale(1.1);
+}
+
+
+header a {
+    text-decoration: none; 
+    color: #c97526; 
+    font-weight: bold; 
+    padding: 10px 20px;
+    margin: 0 10px; 
+    transition: color 0.3s ease-in-out; 
+}
+
+header a:hover {
+    color: #e75e0fcb; 
+}
+
+.imagen-margen {
+    margin: 20px auto; 
+    max-width: 600px;   
+    display: block;     
+}
+
+#navigation {
+    text-align: center; 
+    margin: 20px 0;     
+}
+
+
+#navigation a {
+    text-decoration: none;     
+    color: #26c933;           
+    font-weight: bold;         
+    padding: 10px 20px;        
+    margin: 0 15px;            
+    display: inline-block;     
+    transition: color 0.3s ease-in-out; 
+}
+
+#navigation a:hover {
+    color: #c49c2fcb; 
+}
+.map-iframe {
+    width: 600px;
+    height: 450px;
+    border: none;
+  }
+  .video-container {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto;
+}
+.section {
+    display: none; 
+    margin: 20px 0;
+}
+
+.active {
+    display: block; 
+}
+@media (max-width: 768px) {
+    .cuadro {
+        width: 100px;
+        height: 100px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+#inicio {
+    background-image: url('f:/proyecto-pasteleria/img/img-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+  

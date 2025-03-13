@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,8 +51,13 @@
             border: 1px solid #ccc;
         }
         .error {
-            color: red;
             font-size: 12px;
+        }
+        .errorRojo {
+            color: red;
+        }
+        .errorVerde {
+            color: green;
         }
         button {
             background-color: #a5d6a7;
@@ -82,12 +86,12 @@
         
         <label>Email:</label>
         <input type="email" id="email" oninput="validarEmail()" required>
-        <span class="error" id="errorEmail"></span>
+        <span class="error" id="errorEmail"></span>        
         
         <label>Contraseña:</label>
-        <input type="password" id="password" required>
+        <input type="password" id="password" oninput="validarPassword()" required>
         <button type="button" onclick="generarPassword()">Generar Contraseña</button>
-        <span class="error" id="errorPassword"></span>
+        <div id="validacionPassword"></div>
         
         <label>Fecha de Nacimiento:</label>
         <input type="date" id="fechaNacimiento" required>
@@ -100,7 +104,7 @@
         <input type="text" id="calle" required>
         
         <label>DNI:</label>
-        <input type="text" id="dni" oninput="validarDNI()" required>
+        <input type="text" id="dni" oninput="validarDni()" required>
         <span class="error" id="errorDNI"></span>
         
         <label>Intereses (Máximo 3):</label>
@@ -112,11 +116,12 @@
             <option>Twitter</option>
         </select>
         
-        <label>Selecciona un Producto:</label>
-        <select>
-            <option>Tarta de Chocolate</option>
-            <option>Pastel de Fresas</option>
-            <option>Galletas Artesanales</option>
+        <label for="producto">Selecciona un Producto:</label>
+        <select id="producto" onchange="redirigirProducto()">
+            <option value="">Selecciona...</option>
+            <option value="https://www.marialunarillos.com/blog/tarta-vegana-de-chocolate.html">Tarta de Chocolate Vegana</option>
+            <option value="https://blog.scoolinary.com/3-de-febrero-dia-internacional-de-la-tarta-de-zanahoria">Tarta de Zanahoria</option>
+            <option value="https://demasie.es/galletas-veganas/">Galletas Veganas</option>
         </select>
         
         <label>Observaciones:</label>
@@ -133,25 +138,50 @@
     <p>Correo: contacto@pasteleriafina.com</p>
     
     <script>
-        function validarNombre() {
-            let nombre = document.getElementById('nombre').value;
-            let error = document.getElementById('errorNombre');
-            if (nombre.length < 3) {
-                error.textContent = "El nombre es muy corto";
-            } else {
-                error.textContent = "";
-            }
-        }
-        function validarEmail() {
-            let email = document.getElementById('email').value;
-            let error = document.getElementById('errorEmail');
-            let regex = /^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-            if (!regex.test(email)) {
-                error.textContent = "Formato de email inválido";
-            } else {
-                error.textContent = "";
-            }
-        }
+       function validarNombre() {
+    let nombre = document.getElementById('nombre').value;
+    let error = document.getElementById('errorNombre');
+
+    // Verificar que el nombre tenga al menos 4 caracteres
+    if (nombre.length < 4) {
+        error.textContent = "✖ NOMBRE MUY CORTO";
+        error.style.color = "red"; 
+        return;
+    }
+
+    // Verificar que la primera letra sea mayúscula
+    if (!/^[A-Z]/.test(nombre)) {
+        error.textContent = "✖ EL NOMBRE DEBE COMENZAR CON MAYÚSCULA";
+        error.style.color = "red";
+        return;
+    }
+
+    // Si todo está bien
+    error.textContent = "✔ NOMBRE VÁLIDO";
+    error.style.color = "green"; 
+}
+
+function validarEmail() {
+    let email = document.getElementById('email').value;
+    let error = document.getElementById('errorEmail');
+
+    // Validación de si el campo está vacío
+    if (email.length == 0 || email == null || /^\s+$/.test(email)) {
+        error.textContent = "Has de rellenar el correo";
+        error.style.color = "red";
+    } 
+    // Validación de formato de email
+    else if (/^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+        error.textContent = "OK";
+        error.style.color = "green";
+    } 
+    // Si el email no cumple con el formato
+    else {
+        error.textContent = "Correo incorrecto, ejemplo: ejemplo@dominio.com";
+        error.style.color = "red";
+    }
+}
+
         function validarCodigoPostal() {
             let codigo = document.getElementById('codigoPostal').value;
             let error = document.getElementById('errorCodigoPostal');
@@ -161,24 +191,57 @@
                 error.textContent = "";
             }
         }
-        function validarDNI() {
-            let dni = document.getElementById('dni').value;
-            let error = document.getElementById('errorDNI');
-            let regex = /^[0-9]{8}[A-Z]$/;
-            if (!regex.test(dni)) {
-                error.textContent = "Formato incorrecto. Ejemplo válido: 12345678A";
-            } else {
-                error.textContent = "";
-            }
+
+        function validarDni() {
+    var dni = document.getElementById("dni").value;
+    var error = document.getElementById("errorDNI");
+    var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J',
+                  'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+    // Verifica que el formato del DNI sea correcto
+    if (!(/^\d{8}[A-Z]$/.test(dni))) {
+        error.textContent = "Formato DNI no válido, ejemplo de formato válido: 71238276P";
+        error.style.color = "red";
+    } else {
+        // Verifica la letra del DNI
+        var letra = dni.charAt(8).toUpperCase();
+        var numero = dni.substring(0, 8);
+        if (letra !== letras[numero % 23]) {
+            error.textContent = "La letra del DNI no corresponde con el número indicado";
+            error.style.color = "red";
+        } else {
+            error.textContent = "OK";
+            error.style.color = "green";
         }
-        function generarPassword() {
-            let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*";
-            let password = "";
-            for (let i = 0; i < 12; i++) {
-                password += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            document.getElementById('password').value = password;
+    }
+}
+
+function validarPassword() {
+            let password = document.getElementById('password').value;
+            let validacion = document.getElementById('validacionPassword');
+            let requisitos = [
+                { regex: /[A-Z]/, mensaje: "Al menos una letra en mayúscula" },
+                { regex: /[0-9]/, mensaje: "Al menos un número" },
+                { regex: /.{8,}/, mensaje: "Mínimo 8 caracteres" }
+            ];
+        
+            let mensajes = requisitos.map(req => 
+                req.regex.test(password) 
+                ? `<span style="color:green;">✔ ${req.mensaje}</span>` 
+                : `<span style="color:red;">✖ ${req.mensaje}</span>`
+            ).join("<br>");
+        
+            validacion.innerHTML = mensajes;
         }
+        function redirigirProducto() {
+    var producto = document.getElementById('producto').value;
+    
+    // Verificar si se seleccionó un producto válido
+    if (producto) {
+        window.open(producto, '_blank'); // Abrir el enlace en una nueva pestaña
+    }
+}
+        
     </script>
  <p>
     <a href="https://validator.w3.org/">
@@ -186,10 +249,10 @@
     </a>
 </p>
 <p>
-    <a href="https://fionadugar.github.io/jennifer/rss.xml
-        " onclick="return abrirEnNuevaVentana(this.href);">
-            <img src="img/rss-icon.png" alt="RSS Feed" width="30" height="30" /> Suscribirse al RSS
-        </a>
+    <a href="https://fionadugar.github.io/jennifer/rss.xml" onclick="return abrirEnNuevaVentana(this.href);">
+        <img src="img/rss-icon.png" alt="RSS Feed" width="30" height="30"> Suscribirse al RSS
+    </a>
  </p>
 </body>
 </html>
+

@@ -178,5 +178,247 @@ header a:hover {
     background-size: cover;
     background-position: center;
 }
+body {
+    font: 13px/1.6 Tahoma, sans-serif;
+    background: #F5F5F5;
+    }
+    
+    .izquierda {
+    float: left;
+    clear: left;
+    }
+    
+    .derecha {
+    float: right;
+    clear: right;
+    }
+    
+    ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+    #contenedor {
+    background: #FFF;
+    border: 1px solid silver;
+    margin: 1em auto;
+    padding: 1em;
+    width: 768px;
+    }
+    
+    span.requerido {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: rgb(0, 204, 68);
+    }
+    
+    h2 {
+    font: normal 2em arial, sans-serif;
+    margin: 0;
+    }
+    
+    ul li.botones {
+    border-top: 2px solid #CCC;
+    clear: both;
+    float: none;
+    padding: 1em 0;
+    margin-top: 1em;
+    text-align: right;
+    width: 100%;
+    }
+    
+    ul li.botones input {
+    font-size: 1.3em;
+    }
+    
+    ul li {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    width: 46%;
+    }
+    
+    ul li label.titulo {
+    font-weight: bold;
+    }
+    
+    ul li div span {
+    float: left;
+    padding: 0.3em 0;
+    }
+    
+    ul li div span.completo {
+    width: 100%;
+    }
+    
+    ul li div span.mitad {
+    width: 50%;
+    }
+    
+    ul li div span.tercio {
+    width: 33%;
+    }
+    
+    ul li div span.dostercios {
+    width: 66%;
+    }
+    
+    ul li div span label {
+    display: block;
+    font: normal 0.8em arial, sans-serif;
+    color: #333;
+    }
+    
+    ul li p.ayuda { 
+    display: none;
+    }
+    
+    ul li input {
+    padding: 0.2em;
+    }
+    
+    input#apellido1, input#apellido2, input#direccion, input#email {
+    width: 260px;
+    }
+    
+    input#codigopostal {
+    width: 80px;
+    }
+    
+    select#provincia {
+    width: 90px;
+    }
+    
+    select#pais {
+    width: 150px;
+    }
+    
+    input#telefonofijo, input#telefonomovil {
+    width: 135px;
+    }
+    
+    
+    ul li:hover {
+    background-color: rgb(173, 255, 153);
+    }
+    
+    ul li.botones:hover {
+    background-color: transparent;
+    }
+    
+    ul li input:focus {
+    border: 2px solid #00e658de;
+    }
+    
+    
+    ul li.izquierda, ul li.derecha {
+    float: none;
+    width: auto;
+    }
+    
+    ul li {
+    overflow: hidden;
+    }
+    
+    ul li label.titulo {
+    float: left;
+    width: 150px;
+    }
+    
+    ul li div {
+    margin-left: 160px;
+    }
+    
+    
+    h2 {
+    margin-bottom: 0.3em;
+    }
+    
+    ul li {
+    border-top: 1px solid #CCC;
+    margin: 0;
+    padding: 1em;
+    }
+    
+    ul li.botones {
+    margin: 0;
+    }
+    
+    ul li label.titulo {
+    text-align: right;
+    width: 200px;
+    }
+    
+    ul li div {
+    margin-left: 110px;
+    overflow: hidden;
+    }
+    
+    ul li {
+    position: relative;
+    }
+    
+    ul li:hover p.ayuda {
+    display: block;
+    margin: 0.3em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fce4ec;
+        color: #444;
+        padding: 20px;
+    }
+    .header {
+        text-align: center;
+        padding: 10px;
+        background-color: #ffebee;
+        border-bottom: 2px solid #f8bbd0;
+    }
+    .nav {
+        display: flex;
+        justify-content: center;
+        background-color: #f8bbd0;
+        padding: 10px;
+    }
+    .nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #444;
+        font-weight: bold;
+    }
+    .nav a:hover {
+        color: #d81b60;
+    }
+    form {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 50%;
+        margin: auto;
+    }
+    input, select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .error {
+        color: red;
+        font-size: 12px;
+    }
+    button {
+        background-color: #a5d6a7;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
 
   

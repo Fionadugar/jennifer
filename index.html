@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="estilos.css" />
     <style type="text/css">
-    <style type="text/css">
         /* Formatear el formulario a dos columnas */
 
         body {
@@ -214,13 +213,14 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         body {
-     background-color: rgb(226, 245, 190);
-     background-image: url(img/fondo.jpg);
-     background-repeat: no-repeat;
-/*     background-repeat: repeat-y;     */
-     background-position: center center;
-     background-attachment: fixed;
+        
+    background-color: rgb(226, 245, 190); /* Color de fondo */
+    background-image: url('img/fondo.jpg'); /* Ruta correcta */
+    background-repeat: no-repeat; /* No repetirá la imagen */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Imagen fija al hacer scroll */
 }
+
 body {
             font-family: Arial, sans-serif;
             background-color: #fce4ec;
@@ -277,7 +277,6 @@ body {
         }
     </style>  
 </head>
-
 <body>
     <table class="header-table">
         <tr>
@@ -293,10 +292,10 @@ body {
             <a href="#" onclick="showSection('productos')">Productos</a>
             <a href="#" onclick="showSection('equipo')">Nuestro Equipo</a>
             <a href="#" onclick="showSection('galeria')">Galeria Proyecto</a>
-            <a href="index.html">Inicio</a>
             <a href="mapa.html">Mapa</a>
             <a href="contacto.html">Contacto</a>
             <a href="formulario.html">Formulario</a>
+            <a href="rss.html">RSS</a>
         </div>
     </div>
 
@@ -305,7 +304,7 @@ body {
         <h1>Bienvenidos a la Pastelería Sabor y Salud</h1>
         <p>En nuestra pastelería, ofrecemos productos saludables y deliciosos para todos los gustos.</p>
 
-        <img src="img/postre-inicio.jpg" alt="Imagen de Pastelería" width="100%" style="margin: 20px auto; max-width: 600px; display: block;" usemap="#mapa-imagen" class="imagen-clickable"/>
+        <img src="img/postre-inicio.jpg" alt="imagen de pastelería" width="100%" style="margin: 20px auto; max-width: 600px; display: block;" usemap="#mapa-imagen" class="imagen-clickable"/>
 
             <map name="mapa-imagen" id="mapa-imagen">
             <!-- Enlace al blog de panes y repostería sin gluten -->
@@ -345,8 +344,6 @@ body {
         </object>
     </div>
     
-      
-
 <!-- Video de YouTube Embed -->
 <div class="video-container" style="width:100%; max-width:600px; height:400px; margin:auto; margin-top:20px;">
     <object 
@@ -805,10 +802,15 @@ body {
       src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
     </p>
     <p>
-        <a href="https://fionadugar.github.io/jennifer/rss.xml
-        " onclick="return abrirEnNuevaVentana(this.href);">
-            <img src="img/rss-icon.png" alt="RSS Feed" width="30" height="30" /> Suscribirse al RSS
+        <a href="rss.html">
+            <img src="img/rss-icon.png" alt="RSS Feed" width="30" height="30" /> Ver Noticias RSS
         </a>
     </p>
+    <p>
+        <a href="https://feeder.co/library/feeds/new/rss?q=" >
+        Suscribirse con Feeder
+        </a>
+    </p>
+    
     </body>
     </html>

@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="header">
+        <h1>Tu Rincón de Dulzura Saludable</h1>
+    </div>
+    <div class="nav">
+        <a href="index.html">Inicio</a>
+    </div>
     <h1>Feed de Noticias - Pastelería Sabor y Salud</h1>
     <div id="rss-feed">
         Cargando noticias...
     </div>
-
     <script>
         async function cargarRSS() {
             const url = "https://fionadugar.github.io/jennifer/rss.xml"; // Tu archivo RSS
@@ -47,15 +52,31 @@
 
         cargarRSS();
     </script>
+    <div class="footer">
+        <p>&copy; 2024 Sabor y Salud. Todos los derechos reservados. <a href="#">Política de Privacidad</a></p>
+        </div>
+    <p>
+    <a href="https://validator.w3.org/">
+    <img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88"></a>
+    </p>
+    <p>
+        <a href="https://www.elpais.com/rss" target="_blank">
+            <img src="img/rss-icon.png" alt="RSS Feed" width="30" height="30"> Ver Noticias RSS
+        </a>
+    </p> 
     <p>
         <a href="rss.html">
-            <img src="img/rss-icon.png" alt="RSS Feed" width="30" height="30" /> Ver Noticias RSS
         </a>
-    </p>
+    </p>    
     <p>
         <a href="https://feeder.co/library/feeds/new/rss?q=" >
         </a>
     </p>
-</body>
-</html>
-
+    <p>
+        <a href="https://feeder.co/library/feeds/new/rss?q=" >
+        Suscribirse con Feeder
+        </a>
+    </p>
+    
+    </body>
+    </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed RSS - Pastelería Sabor y Salud</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Feed de Noticias - Pastelería Sabor y Salud</h1>
+    <div id="rss-feed">
+        Cargando noticias...
+    </div>
+
+    <script>
+        async function cargarRSS() {
+            const url = "https://fionadugar.github.io/jennifer/rss.xml"; // Tu archivo RSS
+            try {
+                const response = await fetch(url);
+                const text = await response.text();
+                const parser = new DOMParser();
+                const xml = parser.parseFromString(text, "application/xml");
+
+                let items = xml.querySelectorAll("item");
+                let html = "<ul>";
+
+                items.forEach(item => {
+                    let title = item.querySelector("title").textContent;
+                    let link = item.querySelector("link").textContent;
+                    let description = item.querySelector("description").textContent;
+
+                    html += `
+                        <li>
+                            <h2><a href="${link}" target="_blank">${title}</a></h2>
+                            <p>${description}</p>
+                        </li>
+                    `;
+                });
+
+                html += "</ul>";
+                document.getElementById("rss-feed").innerHTML = html;
+
+            } catch (error) {
+                document.getElementById("rss-feed").innerHTML = "<p>Error al cargar el feed RSS.</p>";
+            }
+        }
+
+        cargarRSS();
+    </script>
+    <p>
+        <a href="rss.html">
+            <img src="img/rss-icon.png" alt="RSS Feed" width="30" height="30" /> Ver Noticias RSS
+        </a>
+    </p>
+    <p>
+        <a href="https://feeder.co/library/feeds/new/rss?q=" >
+        </a>
+    </p>
+</body>
+</html>

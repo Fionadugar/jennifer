@@ -67,6 +67,10 @@
             cursor: pointer;
             margin-top: 10px;
         }
+        option.selected {
+            background-color: #4CAF50;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -107,14 +111,14 @@
         <input type="text" id="dni" oninput="validarDni()" required>
         <span class="error" id="errorDNI"></span>
         
-        <label>Intereses (Máximo 3):</label>
-        <select id="intereses" multiple>
-            <option>Amigos</option>
-            <option>Blog</option>
-            <option>Instagram</option>
-            <option>Facebook</option>
-            <option>Twitter</option>
-        </select>
+        <label for="intereses">Intereses (Máximo 3):</label>
+    <select id="intereses" size="5">
+        <option value="amigos">Amigos</option>
+        <option value="blog">Blog</option>
+        <option value="instagram">Instagram</option>
+        <option value="facebook">Facebook</option>
+        <option value="twitter">Twitter</option>
+    </select>
         
         <label for="producto">Selecciona un Producto:</label>
         <select id="producto" onchange="redirigirProducto()">
@@ -241,9 +245,32 @@ function validarPassword() {
         window.open(producto, '_blank'); // Abrir el enlace en una nueva pestaña
     }
 }
-        
+const selectElement = document.getElementById("intereses");
+        let selectedCount = 0;
+
+        // Función para cambiar el estado de la opción seleccionada
+        selectElement.addEventListener("click", function(event) {
+            const option = event.target;
+
+            // Verificamos si es una opción válida
+            if (option.tagName === "OPTION") {
+                // Si la opción ya está seleccionada, la desmarcamos
+                if (option.classList.contains("selected")) {
+                    option.classList.remove("selected");
+                    selectedCount--;
+                } else {
+                    // Si no hay 3 opciones seleccionadas, marcamos la opción
+                    if (selectedCount < 3) {
+                        option.classList.add("selected");
+                        selectedCount++;
+                    } else {
+                        alert("Solo puedes seleccionar hasta 3 intereses.");
+                    }
+                }
+            }
+        });
     </script>
-<div class="footer">
+   <div class="footer">
     <p>&copy; 2024 Sabor y Salud. Todos los derechos reservados. <a href="#">Política de Privacidad</a></p>
     </div>
 <p>

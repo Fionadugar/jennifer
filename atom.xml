@@ -11,49 +11,45 @@
 <email>contacto@fionadugar.github.io</email>
 </author>
 
-<!--  Entrada 1: Nuevos productos sin gluten -->
-<entry>
-<title>¡Descubre nuestros nuevos productos sin gluten!</title>
-<link href="https://fionadugar.github.io/jennifer/productos_sin_gluten.html"/>
-<id>https://fionadugar.github.io/jennifer/productos_sin_gluten.html</id>
-<updated>2025-03-18T09:00:00Z</updated>
-<summary>Nuevo listado de productos sin gluten disponibles en nuestra tienda. ¡Sigue disfrutando de la pastelería saludable!</summary>
-<content type="html">
-<![CDATA[ 
-<p>Ahora en <strong>Pastelería Sabor y Salud</strong>, ampliamos nuestra oferta de productos <strong>100% sin gluten</strong>.</p>
-<p><a href="https://fionadugar.github.io/jennifer/productos_sin_gluten.html" target="_blank" onclick="window.open(this.href, 'opera'); return false;">Ver productos aquí</a></p> 
-]]>
-</content>
-</entry>
+ <entry>
+    <title>Recetas de batidos saludables para disfrutar</title>
+    <link href="https://www.hola.com/estar-bien/20221128221767/batidos-sanos-como-prepararlos/"/>
+    <id>https://www.hola.com/estar-bien/20221128221767/batidos-sanos-como-prepararlos/</id>
+    <updated>2025-03-18T12:30:00Z</updated>
+    <summary>Aprende a preparar deliciosos y saludables batidos, ideales para acompañar tus meriendas.</summary>
+    <content type="html">
+      <![CDATA[ 
+        <p>Descubre cómo preparar batidos saludables con esta receta fácil y deliciosa. ¡Perfectos para tu bienestar!</p>
+        <p><a href="https://www.hola.com/estar-bien/20221128221767/batidos-sanos-como-prepararlos/" target="_blank" onclick="window.open(this.href, 'opera'); return false;">Ver receta aquí</a></p> 
+      ]]>
+    </content>
+  </entry>
 
-<!--  Entrada 2: Tarifas actualizadas -->
 <entry>
-<title>Tarifas actualizadas de nuestros productos</title>
-<link href="https://fionadugar.github.io/jennifer/nuevas_tarifas.html"/>
-<id>https://fionadugar.github.io/jennifer/nuevas_tarifas.html</id>
-<updated>2025-03-17T15:00:00Z</updated>
-<summary>Consulta las tarifas actualizadas de nuestros productos saludables. ¡Todo al alcance de tu mano!</summary>
-<content type="html">
-<![CDATA[ 
-<p>Consulta las nuevas tarifas de nuestra pastelería y sigue disfrutando de opciones saludables y accesibles.</p>
-<p><a href="https://fionadugar.github.io/jennifer/nuevas_tarifas.html" target="_blank" onclick="window.open(this.href, 'opera'); return false;">Ver tarifas</a></p> 
-]]>
-</content>
-</entry>
+    <title>Las diez cafeterías más trendy de Pamplona</title>
+    <link href="https://navarracapital.es/las-diez-cafeterias-mas-trendy-de-pamplona/"/>
+    <id>https://navarracapital.es/las-diez-cafeterias-mas-trendy-de-pamplona/</id>
+    <updated>2025-03-18T12:00:00Z</updated>
+    <summary>Explora las cafeterías más modernas y con estilo en Pamplona, ¡perfectas para disfrutar de una buena taza de café!</summary>
+    <content type="html">
+      <![CDATA[ 
+        <p>Conoce las cafeterías más trendy de Pamplona. ¡Ideas perfectas para combinar con nuestras pastelerías!</p>
+        <p><a href="https://navarracapital.es/las-diez-cafeterias-mas-trendy-de-pamplona/" target="_blank" onclick="window.open(this.href, 'opera'); return false;">Ver artículo aquí</a></p> 
+      ]]>
+    </content>
+  </entry>
 
-<!--  Entrada 3: Nueva ubicación -->
-<entry>
-<title>Visita nuestro nuevo mapa de localización</title>
-<link href="https://fionadugar.github.io/jennifer/mapa_localizacion.html"/>
-<id>https://fionadugar.github.io/jennifer/mapa_localizacion.html</id>
-<updated>2025-03-16T12:00:00Z</updated>
-<summary>Ahora puedes encontrarnos más fácilmente con nuestro nuevo mapa de localización en la web.</summary>
-<content type="html">
-<![CDATA[ 
-<p>Hemos actualizado nuestra web con un <strong>nuevo mapa interactivo</strong> para que nos encuentres fácilmente.</p>
-<p><a href="https://fionadugar.github.io/jennifer/mapa_localizacion.html" target="_blank" onclick="window.open(this.href, 'opera'); return false;">Ver mapa</a></p> 
-]]>
-</content>
-</entry>
-
+ <entry>
+    <title>Descubre cómo hacer un pastel delicioso en este video</title>
+    <link href="https://www.youtube.com/watch?v=E6pX5nXUPYE"/>
+    <id>https://www.youtube.com/watch?v=E6pX5nXUPYE</id>
+    <updated>2025-03-18T11:00:00Z</updated>
+    <summary>Aprende a hacer un pastel delicioso con este video tutorial. ¡Ideal para pasteleros novatos!</summary>
+    <content type="html">
+      <![CDATA[ 
+        <p>Si te encanta la pastelería, no te puedes perder este video sobre cómo hacer un pastel delicioso.</p>
+        <p><a href="https://www.youtube.com/watch?v=E6pX5nXUPYE" target="_blank" onclick="window.open(this.href, 'opera'); return false;">Ver video aquí</a></p> 
+      ]]>
+    </content>
+  </entry>
 </feed>

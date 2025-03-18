@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
-  <channel>
-    <title>Novedades de Pastelería Sabor y Salud</title>
-    <link>https://fionadugar.github.io/jennifer/index.html</link>
-    <description>
-      Novedades de nuestra pastelería saludable Sabor y Salud, con productos aptos para personas celíacas y con diabetes.
-    </description>
-    <item>
-      <title>¡Descubre nuestros nuevos productos sin gluten!</title>
-      <link>https://fionadugar.github.io/jennifer/productos_sin_gluten.html</link>
-      <description>Nuevo listado de productos sin gluten disponibles en nuestra tienda. ¡Sigue disfrutando de la pastelería saludable!</description>
-    </item>
-     <item>
-      <title>Ladurée - El arte de la pastelería francesa</title>
-      <link>https://www.laduree.fr/en/en_int/</link>
-      <description>Explora las exquisiteces y la tradición de la famosa pastelería francesa Ladurée.</description>
-    </item>
- <item>
+<channel>
+<item>
+<title>Tienda online Artepan: Panadería y pastelería del horno a tu mesa</title>
+<link>https://www.veiss.com/blog/tienda-online-artepan-panaderi-y-pasteleria-del-horno-a-tu-mesa/</link>
+<description>Descubre cómo la tienda online de Artepan lleva panadería y pastelería del horno a tu mesa. ¡La mejor calidad al alcance de un clic!</description>
+</item>
+<title>Pastelería Vegana en Ideal Gourmet</title>
+<link>https://comercialjuandomingo.es/2021/09/15/nuestro-articulo-sobre-pasteleria-vegana-en-ideal-gourmet/</link>
+<description>Descubre nuestro artículo sobre pastelería vegana publicado en Ideal Gourmet. Una opción deliciosa y saludable para todos.</description>
+</item>
+<item>
+<title>Ladurée - El arte de la pastelería francesa</title>
+<link>https://www.laduree.fr/en/en_int/</link>
+<description>Explora las exquisiteces y la tradición de la famosa pastelería francesa Ladurée.</description>
+</item>
+<item>
 <title>Tarta Vegana de Chocolate</title> 
 <link>https://www.marialunarillos.com/blog/tarta-vegana-de-chocolate.html</link>
 <description>Descubre la receta de una deliciosa tarta vegana de chocolate perfecta para disfrutar de un postre saludable.</description>

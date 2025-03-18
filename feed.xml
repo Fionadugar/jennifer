@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Novedades de Pastelería Sabor y Salud</title>
+    <link href="https://fionadugar.github.io/jennifer/index.html" rel="alternate" type="text/html"/>
+    <updated>2024-03-18T12:00:00Z</updated>
+    <author>
+        <name>Pastelería Sabor y Salud</name>
+    </author>
+    <id>tag:fionadugar.github.io,2024-03-18:/novedades</id>
+
+    <entry>
+        <title>¡Descubre nuestros nuevos productos sin gluten!</title>
+        <id>tag:fionadugar.github.io,2024-03-18:/productos_sin_gluten</id>
+        <link href="https://fionadugar.github.io/jennifer/novedades.html"/>
+        <summary>Hemos añadido deliciosos postres sin gluten a nuestro menú. ¡Ven a probarlos!</summary>
+        <updated>2024-03-18T12:10:00Z</updated>
+    </entry>
+
+    <entry>
+        <title>Tarifas actualizadas de nuestros productos</title>
+        <id>tag:fionadugar.github.io,2024-03-18:/tarifas_actualizadas</id>
+        <link href="https://fionadugar.github.io/jennifer/precios.html"/>
+        <summary>Consulta las tarifas actualizadas de nuestros productos saludables. ¡Accesibles y deliciosos!</summary>
+        <updated>2024-03-18T12:20:00Z</updated>
+    </entry>
+
+    <entry>
+        <title>Nuevo mapa de localización</title>
+        <id>tag:fionadugar.github.io,2024-03-18:/nueva_localizacion</id>
+        <link href="https://fionadugar.github.io/jennifer/localizacion.html"/>
+        <summary>Ahora puedes encontrarnos más fácilmente con nuestro nuevo mapa interactivo.</summary>
+        <updated>2024-03-18T12:30:00Z</updated>
+    </entry>
+</feed>

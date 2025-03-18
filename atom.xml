@@ -1,0 +1,59 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+<!--  Información básica del feed  -->
+<title>Pastelería Sabor y Salud</title>
+<subtitle>Repostería saludable: opciones sin gluten y aptas para diabéticos.</subtitle>
+<link href="https://fionadugar.github.io/jennifer/index.html" rel="self"/>
+<link href="https://fionadugar.github.io/jennifer/"/>
+<updated>2025-03-18T10:00:00Z</updated>
+<id>https://fionadugar.github.io/jennifer/</id>
+<author>
+<name>Pastelería Sabor y Salud</name>
+<email>contacto@fionadugar.github.io</email>
+</author>
+
+<!--  Entrada 1: Nuevos productos sin gluten -->
+<entry>
+<title>¡Descubre nuestros nuevos productos sin gluten!</title>
+<link href="https://fionadugar.github.io/jennifer/productos_sin_gluten.html"/>
+<id>https://fionadugar.github.io/jennifer/productos_sin_gluten.html</id>
+<updated>2025-03-18T09:00:00Z</updated>
+<summary>Nuevo listado de productos sin gluten disponibles en nuestra tienda. ¡Sigue disfrutando de la pastelería saludable!</summary>
+<content type="html">
+<![CDATA[ 
+<p>Ahora en <strong>Pastelería Sabor y Salud</strong>, ampliamos nuestra oferta de productos <strong>100% sin gluten</strong>.</p>
+<p><a href="https://fionadugar.github.io/jennifer/productos_sin_gluten.html" target="_blank" onclick="window.open(this.href, 'opera'); return false;">Ver productos aquí</a></p> 
+]]>
+</content>
+</entry>
+
+<!--  Entrada 2: Tarifas actualizadas -->
+<entry>
+<title>Tarifas actualizadas de nuestros productos</title>
+<link href="https://fionadugar.github.io/jennifer/nuevas_tarifas.html"/>
+<id>https://fionadugar.github.io/jennifer/nuevas_tarifas.html</id>
+<updated>2025-03-17T15:00:00Z</updated>
+<summary>Consulta las tarifas actualizadas de nuestros productos saludables. ¡Todo al alcance de tu mano!</summary>
+<content type="html">
+<![CDATA[ 
+<p>Consulta las nuevas tarifas de nuestra pastelería y sigue disfrutando de opciones saludables y accesibles.</p>
+<p><a href="https://fionadugar.github.io/jennifer/nuevas_tarifas.html" target="_blank" onclick="window.open(this.href, 'opera'); return false;">Ver tarifas</a></p> 
+]]>
+</content>
+</entry>
+
+<!--  Entrada 3: Nueva ubicación -->
+<entry>
+<title>Visita nuestro nuevo mapa de localización</title>
+<link href="https://fionadugar.github.io/jennifer/mapa_localizacion.html"/>
+<id>https://fionadugar.github.io/jennifer/mapa_localizacion.html</id>
+<updated>2025-03-16T12:00:00Z</updated>
+<summary>Ahora puedes encontrarnos más fácilmente con nuestro nuevo mapa de localización en la web.</summary>
+<content type="html">
+<![CDATA[ 
+<p>Hemos actualizado nuestra web con un <strong>nuevo mapa interactivo</strong> para que nos encuentres fácilmente.</p>
+<p><a href="https://fionadugar.github.io/jennifer/mapa_localizacion.html" target="_blank" onclick="window.open(this.href, 'opera'); return false;">Ver mapa</a></p> 
+]]>
+</content>
+</entry>
+
+</feed>
